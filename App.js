@@ -1,14 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import reactDom from 'react-dom';
-import { StyleSheet, Button, View } from 'react-native';
-import {Constants} from './Constants.js';
+import { StyleSheet, Text, View } from 'react-native';
+import { Dimensions } from 'react-native-web';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <div style={playContainer}>asdas</div>
-      <div style={buttonContainer}>asfas</div>
+      <Text style={styles.playContainer}>Open up App.js to start working on your app!</Text>
+      <Text style={styles.buttonContainer}>Open up App.js to start working on your app!</Text>
     </View>
   );
 }
@@ -18,14 +17,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonContainer: {
-    width: Constants.MAX_WIDTH,
+    backgroundColor: 'blue',
     height: 60,
-    color: blue,
+    width: Dimensions.get('window').width,
   },
-  playContainer:{
-    width: Constants.MAX_WIDTH,
-    height: 60,
-    color: red,
-  },
-
+  playContainer: {
+    backgroundColor: 'red',
+    height: Dimensions.get('window').height - 60,
+    width: Dimensions.get('window').width,
+  }
 });
+
+const Constants = {
+  MAX_WIDTH: Dimensions.get('window').width,
+  MAX_HEIGHT: Dimensions.get('window').height,
+}
