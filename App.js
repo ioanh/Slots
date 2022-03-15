@@ -10,7 +10,7 @@ export default function App() {
         <ReelSet></ReelSet>
       </View>
       <View style={styles.buttonContainer}>
-        <Button title='Spin' onPress={() => {console.log('iesi')}}/>
+        <Button title='Spin' onPress={() => {}}/>
       </View> 
     </View>
   );
