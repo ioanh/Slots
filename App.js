@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+import ReelSet from './components/ReelSet';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Dimensions } from 'react-native-web';
@@ -6,9 +6,11 @@ import { Button, Dimensions } from 'react-native-web';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.playContainer} />
+      <View style={styles.playContainer} > 
+        <ReelSet></ReelSet>
+      </View>
       <View style={styles.buttonContainer}>
-        <Button title='Spin'/>
+        <Button title='Spin' onPress={() => {console.log('iesi')}}/>
       </View> 
     </View>
   );
@@ -17,6 +19,8 @@ export default function App() {
 export const Constants = {
   MAX_WIDTH: Dimensions.get('window').width,
   MAX_HEIGHT: Dimensions.get('window').height,
+  REELS: 5,
+  SYMBOLS: 3,
 }
 
 const styles = StyleSheet.create({
