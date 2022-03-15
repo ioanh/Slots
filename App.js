@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dimensions } from 'react-native-web';
-
+import { Constants } from './Constants';
 export default function App() {
   return (
     <View style={styles.container}>
@@ -12,6 +12,11 @@ export default function App() {
   );
 }
 
+// const Constants = {
+//   MAX_WIDTH: Dimensions.get('window').width,
+//   MAX_HEIGHT: Dimensions.get('window').height,
+// }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -19,16 +24,13 @@ const styles = StyleSheet.create({
   buttonContainer: {
     backgroundColor: 'blue',
     height: 60,
-    width: Dimensions.get('window').width,
+    width: Constants.MAX_WIDTH,
   },
   playContainer: {
     backgroundColor: 'red',
-    height: Dimensions.get('window').height - 60,
-    width: Dimensions.get('window').width,
+    // height: Constants.MAX_HEIGHT - 60,
+    // width: Constants.MAX_WIDTH,
   }
 });
 
-const Constants = {
-  MAX_WIDTH: Dimensions.get('window').width,
-  MAX_HEIGHT: Dimensions.get('window').height,
-}
+
