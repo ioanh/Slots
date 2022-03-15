@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dimensions } from 'react-native-web';
-import { Constants } from './Constants';
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -12,10 +12,10 @@ export default function App() {
   );
 }
 
-// const Constants = {
-//   MAX_WIDTH: Dimensions.get('window').width,
-//   MAX_HEIGHT: Dimensions.get('window').height,
-// }
+export const Constants = {
+  MAX_WIDTH: Dimensions.get('window').width,
+  MAX_HEIGHT: Dimensions.get('window').height,
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
   },
   playContainer: {
     backgroundColor: 'red',
-    // height: Constants.MAX_HEIGHT - 60,
-    // width: Constants.MAX_WIDTH,
+    height: Constants.MAX_HEIGHT - 60,
+    width: Constants.MAX_WIDTH,
   }
 });
 
