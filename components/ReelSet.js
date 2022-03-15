@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { View, StyleSheet, Button, Text } from "react-native-web";
 import { Constants } from "../App";
+import Reel from "./Reel";
 
 
 export default class ReelSet extends Component {
@@ -21,9 +22,12 @@ export default class ReelSet extends Component {
 
     renderReels = () => {
         let reelWidth = this.state.width / Constants.REELS;
-        let reelHeight = this.state.height / Constants.SYMBOLS;
+        let reelList = Array.apply(null, Array(Constants.REELS)).map((el, idx) => {
+            return <Reel width={reelWidth} height = {this.state.height} key={idx} index={idx}></Reel>
+
+        })
         return (
-            <Text>{this.state.width} {this.state.height}</Text>
+            <>{reelList}</>
         )
     }
 
@@ -40,5 +44,6 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: 'orange',
+      flexDirection: 'row',
     }
   });
