@@ -33,7 +33,7 @@ export default class ReelSet extends Component {
 
     render(){
         return(
-            <View style={styles.container} onLayout={this.onLayout}>
+            <View style={styles.ReelSet} onLayout={this.onLayout}>
                 {this.state.width && this.state.height && this.renderReels()}
             </View>
         );
@@ -41,8 +41,7 @@ export default class ReelSet extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
+    ReelSet: {
       backgroundColor: 'orange',
       flexDirection: 'row',
     }
