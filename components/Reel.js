@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { View, StyleSheet, Button, Text } from "react-native-web";
 import { Constants } from "../App";
+import Symbol from "./Symbol";
 
 
 export default class Reel extends Component {
