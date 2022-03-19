@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     width: Constants.MAX_WIDTH,
   },
   playContainer: {
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     height: Constants.MAX_HEIGHT - 60,
     width: Constants.MAX_WIDTH,
   }

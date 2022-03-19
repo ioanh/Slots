@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { View, StyleSheet, Button, Text } from "react-native-web";
-import { Constants } from "../App";
+import  Constants  from "../App";
 import Reel from "./Reel";
 
 

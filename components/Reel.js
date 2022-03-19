@@ -27,7 +27,7 @@ export default class Reel extends Component {
 
 const styles = StyleSheet.create({
     reel: {
-      overflow: 'hidden',
+    //   overflow: 'hidden',
       backgroundColor: 'pink',
     }
   });
